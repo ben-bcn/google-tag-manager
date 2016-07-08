@@ -1,4 +1,47 @@
-<script type="text/javascript">
-var loop11_key = "{PASTE_YOUR_KEY_HERE}";
+___INFO___
+
+{
+  "type": "TAG",
+  "id": "img",
+  "version": 1,
+  "displayName": {
+    "messageId": "TAG_TYPE",
+    "description": "Loop11 Standard JavaScript.",
+    "text": "Custom Loop22 Tag"
+  },
+  "description": [
+    {
+      "text": {
+        "messageId": "TAG_DESCRIPTION_WEB",
+        "description": "Loop11 Standard JavaScript for web containers.",
+        "text": "Allow you to insert Loop11's JavaScript seamlessly into your website so you can run your tests."
+      },
+      "containerContexts": ["WEB"]
+    }
+  ]
+}
+
+___JS_TEMPLATE___
+
+var loop11_key = "data[$userLoop11Id]";
 document.write(unescape("%3cscript src='//cdn.loop11.com/my/loop11.js' type='text/javascript'%3e%3c/script%3e"));
-</script>
+
+___TEMPLATE_PARAMETERS___
+
+[
+  {
+    "name": "userLoop11Id",
+    "displayName": {
+      "messageId": "USER_ID",
+      "description": "Loop11 User Id.",
+      "text": "Unique Loop11 User Id, found within 'My Account'."
+    },
+    "type": "TEXT",
+    "valueHint": {
+      "messageId": "USER_ID_HINT",
+      "description": "Hint displayed in the text input for entering the user id parameter.",
+      "text": "Example: 6h222e0778e45b5b445111a443dc473cdb90bd07f"
+    },
+    "valueValidators": ["NON_EMPTY"]
+  }
+]
